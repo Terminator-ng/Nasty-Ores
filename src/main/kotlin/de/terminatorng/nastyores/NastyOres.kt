@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory
 const val MOD_ID = "nastyores"
 val MOD_LOGGER: Logger = LoggerFactory.getLogger(MOD_ID)
 
-val ITEM_GROUP: ItemGroup = FabricItemGroupBuilder.build(id("items")) { ModOres.POLITE_ORE.nastyOre.oreBlock.defaultStack }
+val ITEM_GROUP: ItemGroup = FabricItemGroupBuilder.build(id("item_group")) { ModOres.POLITE_ORE.nastyOre.oreBlock.defaultStack }
 
 @Suppress("UNUSED")
 fun init() {

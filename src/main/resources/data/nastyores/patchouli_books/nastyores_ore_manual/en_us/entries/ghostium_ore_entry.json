@@ -1,0 +1,11 @@
+{
+  "name": "Ghostium",
+  "icon": "nastyores:ghostium_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "You can see it, but you can't grab it. Thus, it was labeled 'ghostium' for obvious reasons - along with similar things like the 'ghostrays' from our sun, or the 'blue-ghost-stuff' that you drink all day."
+    }
+  ]
+}

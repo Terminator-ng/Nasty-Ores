@@ -1,7 +1,6 @@
 package de.terminatorng.nastyores.init
 
 import de.terminatorng.nastyores.ore.*
-import jdk.incubator.foreign.NativeSymbol
 
 enum class ModOres(val nastyOre: NastyOre) {
 
@@ -38,7 +37,7 @@ enum class ModOres(val nastyOre: NastyOre) {
     UNOBTAINIUM_ORE(NastyOre("unobtainium", UnobtainiumOre)),
     USELESSIUM_ORE(NastyOre("uselessium", UselessiumOre)),
     WANNAFITE_ORE(NastyOre("wannafite", WannafiteOre)),
-    WANNARITE_ORE(NastyOre("wannarite", WannariteOre)),
+    WANNARITE_ORE(NastyOre("wantarite", WantariteOre)),
     WEBSITE_ORE(NastyOre("website", WebsiteOre)),
     ZOMBIEUNITE_ORE(NastyOre("zombieunite", ZombieuniteOre));
 

@@ -1,0 +1,11 @@
+{
+  "name": "Enderite",
+  "icon": "nastyores:enderite_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Over the years, some of the Endermen's activity has started to take its tolls over some iron ores, corrupting them with space anormalities. If you suddenly find yourself looking at a giant surface rapidly gaining speed towards your face, they are why."
+    }
+  ]
+}

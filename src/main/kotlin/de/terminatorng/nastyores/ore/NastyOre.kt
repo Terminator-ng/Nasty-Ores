@@ -1,34 +1,35 @@
 package de.terminatorng.nastyores.ore
 
 import de.terminatorng.nastyores.IRegistrable
-import de.terminatorng.nastyores.id
+import de.terminatorng.nastyores.datagen.ModDatagen
 import de.terminatorng.nastyores.init.ModBlocks
 import de.terminatorng.nastyores.init.ModItems
 import de.terminatorng.nastyores.world.OreGen
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings
-import net.minecraft.block.*
+import net.minecraft.block.Block
+import net.minecraft.block.Material
 import net.minecraft.data.client.BlockStateModelGenerator
 import net.minecraft.data.client.ItemModelGenerator
-import net.minecraft.data.client.Model
-import net.minecraft.data.client.Models
-import net.minecraft.data.server.BlockLootTableGenerator
+import net.minecraft.data.client.ModelIds
+import net.minecraft.data.server.RecipeProvider
 import net.minecraft.data.server.recipe.RecipeJsonProvider
 import net.minecraft.item.BlockItem
 import net.minecraft.item.Item
-import net.minecraft.loot.LootPool
-import net.minecraft.loot.LootTable
-import net.minecraft.loot.entry.ItemEntry
-import net.minecraft.loot.provider.number.ConstantLootNumberProvider
-import java.util.*
+import net.minecraft.item.Items
+import net.minecraft.tag.BlockTags
+import net.minecraft.tag.TagKey
 import java.util.function.Consumer
 
 class NastyOre(override val name: String, val settings: INastyOreSettings): IRegistrable {
 
-    private val oreBlockName = "${name}_ore"
-    private val blockName = "${name}_block"
+    fun oreBlockName() = "${name}_ore"
+    fun blockName() = "${name}_block"
+    fun itemName() = if (settings.itemHasIngotName()) "${name}_ingot" else name
+
 
     val oreBlock = settings.oreItemFactory(oreBlockItemSettings(), settings.oreFactory(oreBlockSettings()))
     val item: Item?
@@ -41,10 +42,10 @@ class NastyOre(override val name: String, val settings: INastyOreSettings): IReg
     }
 
     override fun register() {
-        ModBlocks.registerBlockItem(oreBlockName, oreBlock)
+        ModBlocks.registerBlockItem(oreBlockName(), oreBlock)
 
-        if (item != null) ModItems.registerItem(name, item)
-        if (block != null) ModBlocks.registerBlockItem(blockName, block)
+        if (item != null) ModItems.registerItem(itemName(), item)
+        if (block != null) ModBlocks.registerBlockItem(blockName(), block)
 
         OreGen.registerOreGen(name, oreBlock.block.defaultState, settings)
     }
@@ -64,29 +65,38 @@ class NastyOre(override val name: String, val settings: INastyOreSettings): IReg
 
 
     fun generateBlockModels(generator: BlockStateModelGenerator) {
-        generator.registerSimpleCubeAll(oreBlock.block)
-        if (block != null) generator.registerSimpleCubeAll(block.block)
+        settings.genOreModel(oreBlock.block, generator)
+
+        if (block != null) settings.genBlockModel(block.block, generator)
     }
 
     fun generateItemModels(generator: ItemModelGenerator) {
-        generator.register(oreBlock, createParentModel(oreBlockName))
-        if (block != null) generator.register(block, createParentModel(blockName))
-        if (item != null) generator.register(item, Models.GENERATED)
+        generator.register(oreBlock, ModDatagen.createParentModel(ModelIds.getBlockModelId(oreBlock.block)))
+        if (block != null) generator.register(block, ModDatagen.createParentModel(ModelIds.getBlockModelId(block.block)))
+        if (item != null) settings.genItemModel(item, generator)
     }
 
-    private fun createParentModel(name: String) = Model(
-        Optional.of(id(oreBlockName)),
-        Optional.empty(),
-    )
-
     fun generateRecipes(exporter: Consumer<RecipeJsonProvider>?) {
+        if (item != null && !settings.dropsItemDirectly())
+            FabricRecipeProvider.offerSmelting(exporter, listOf(oreBlock.block), item, 0.7f, 200, "iron_ingot")
+
         if (block != null && item != null)
             FabricRecipeProvider.offerReversibleCompactingRecipes(exporter, item, block)
     }
 
     fun generateBlockLootTables(provider: FabricBlockLootTableProvider) {
-        settings.drops(oreBlock.block, item)
+        provider.addDrop(oreBlock.block, settings.drops(oreBlock.block, item))
 
-        if (block != null) FabricBlockLootTableProvider.drops(block.block)
+        if (block != null) provider.addDrop(block.block, FabricBlockLootTableProvider.drops(block.block))
+    }
+
+    fun generateBlockTags(getter: (TagKey<Block>) -> FabricTagProvider<Block>.FabricTagBuilder<Block>) {
+        getter(settings.levelNeeded()).add(oreBlock.block)
+        getter(settings.toolNeeded()).add(oreBlock.block)
+
+        if (block != null) {
+            getter(BlockTags.NEEDS_STONE_TOOL).add(block.block)
+            getter(BlockTags.PICKAXE_MINEABLE).add(block.block)
+        }
     }
 }

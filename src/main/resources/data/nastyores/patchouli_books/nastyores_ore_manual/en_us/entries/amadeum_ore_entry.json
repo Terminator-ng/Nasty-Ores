@@ -1,0 +1,11 @@
+{
+  "name": "Amadeum",
+  "icon": "nastyores:amadeum_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "With plate tectonics come interesting side effects, sometimes. This almost crystal-like mineral strangely interacts with... Oh wait, you don't actually care about the mechanics, do you? ... This ore makes funny sounds, and can be worked into decent armor and tools."
+    }
+  ]
+}

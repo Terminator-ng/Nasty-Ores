@@ -1,13 +1,29 @@
 package de.terminatorng.nastyores.ore
 
+import de.terminatorng.nastyores.datagen.ModDatagen
+import net.minecraft.block.Block
+import net.minecraft.block.Blocks
+import net.minecraft.data.client.*
+import net.minecraft.item.Item
+import net.minecraft.item.Items
+
 
 object LookslikediamondiumOre: INastyOreSettings {
 
-    // fun dropsIngotDirectly() = true
+    override fun dropsItemDirectly() = true
     override fun hasItem() = true
     override fun hasBlock() = true
     override fun hasTools() = true
     override fun hasArmor() = true
+
+    private val DIAMOND_BLOCK_PARENT_MODEL_FACTORY: TexturedModel.Factory =
+        TexturedModel.makeFactory({ block -> TextureMap.all(block) }, ModDatagen.createParentModel(ModelIds.getBlockModelId(Blocks.DIAMOND_BLOCK)))
+
+    override fun genBlockModel(block: Block, generator: BlockStateModelGenerator) =
+        generator.registerSingleton(block, DIAMOND_BLOCK_PARENT_MODEL_FACTORY)
+
+    override fun genItemModel(item: Item, generator: ItemModelGenerator) =
+        generator.register(item, ModDatagen.createParentModel(ModelIds.getItemModelId(Items.DIAMOND)))
 
     // fun getToolInfo(): ToolInfo? {
     //     return ToolInfo(0, 1, 2.0f, 0.0f, 0)

@@ -42,13 +42,13 @@ dependencies {
     modImplementation("vazkii.patchouli", "Patchouli", patchouliVersion)
 }
 
-val runDatagen by tasks.existing // this creates an error (but not here -> https://github.com/MattiDragon/ExtendedDrawers/blob/main/build.gradle)
+// val runDatagen by loom.runConfigs.named("runDatagen")
 
-val copyDatagen by tasks.registering(Copy::class) {
-    from("src/main/generated")
-    into("build/resources/main")
-    dependsOn(runDatagen)
-}
+// val copyDatagen by tasks.registering(Copy::class) {
+//     from("src/main/generated")
+//     into("build/resources/main")
+//     dependsOn(runDatagen)
+// }
 
 tasks {
     val javaVersion = JavaVersion.VERSION_17
@@ -65,7 +65,7 @@ tasks {
     }
     jar {
         from("LICENSE") { rename { "${it}_${base.archivesName}" } }
-        dependsOn(copyDatagen)
+        // dependsOn(copyDatagen)
     }
     processResources {
         inputs.property("version", project.version)
@@ -79,14 +79,23 @@ tasks {
     }
 }
 
+val generatedResources = "src/generated/resources"
+
+sourceSets.main {
+    resources {
+        srcDir(generatedResources)
+    }
+}
+
 loom {
+    accessWidenerPath.set(file("src/main/resources/nastyores.accesswidener"))
+
     runs {
         create("Data Generation") {
             client()
-            vmArg("-Dfabric-api-datagen")
-            vmArg("-Dfabric-api-datagen.output-dir=${file("src/generated/resources")}")
-            vmArg("-Dfabric-api-datagen.modid=badores")
-            runDir = "build/datagen"
+            vmArg("-Dfabric-api.datagen")
+            vmArg("-Dfabric-api.datagen.output-dir=${file(generatedResources)}")
         }
     }
 }
+

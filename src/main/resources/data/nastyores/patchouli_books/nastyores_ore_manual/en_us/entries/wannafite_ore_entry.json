@@ -1,0 +1,11 @@
+{
+  "name": "Wannafite",
+  "icon": "nastyores:wannafite_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "This ore seems to be reluctant to be hit in the head with a pickaxe, thrown into the hot fires of a furnace, and then repeatedly being hammered down into the shape of a tool. It has learned to fight back."
+    }
+  ]
+}

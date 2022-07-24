@@ -6,6 +6,7 @@ import net.minecraft.block.OreBlock
 import net.minecraft.entity.player.PlayerEntity
 
 import net.minecraft.item.ItemStack
+import net.minecraft.text.Text
 import net.minecraft.util.math.BlockPos
 import net.minecraft.util.registry.Registry
 
@@ -23,22 +24,20 @@ object MisleadiumOre: INastyOreSettings {
             super.onBreak(world, pos, state, player)
             world ?: return
             pos ?: return
+            player ?: return
 
             if (!world.isClient) {
                 val stack = Registry.ITEM.get(Registry.ITEM.keys.random())?.defaultStack ?: return
                 val fX: Int = pos.x + world.random.nextInt(SIDE_RANGE) - world.random.nextInt(SIDE_RANGE)
                 val fY: Int = world.random.nextInt(100) + 10
                 val fZ: Int = pos.z + world.random.nextInt(SIDE_RANGE) - world.random.nextInt(SIDE_RANGE)
-                // BadOres.network.sendTo(
-                //     PacketRandomTranslation(
-                //         "badores.misleadium.baseMessage",
-                //         stack,
-                //         Integer.toString(fX),
-                //         Integer.toString(fY),
-                //         Integer.toString(fZ)
-                //     ),
-                //     miner as EntityPlayerMP?
-                // )
+                player.sendMessage(Text.translatable(
+                    "badores.misleadium.baseMessage",
+                    stack,
+                    fX.toString(),
+                    fY.toString(),
+                    fZ.toString()
+                ))
             }
         }
     }

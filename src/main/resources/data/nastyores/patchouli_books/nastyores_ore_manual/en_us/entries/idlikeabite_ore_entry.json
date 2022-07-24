@@ -1,0 +1,11 @@
+{
+  "name": "Idlikeabite",
+  "icon": "nastyores:idlikeabite_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Mining this ore is so extremely tedious that you tire from the work and afterwards wonder where the nearest delicious chicken leg was again."
+    }
+  ]
+}

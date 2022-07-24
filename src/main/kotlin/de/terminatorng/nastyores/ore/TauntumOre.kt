@@ -1,7 +1,6 @@
 package de.terminatorng.nastyores.ore
 
 import de.terminatorng.nastyores.MOD_LOGGER
-import de.terminatorng.nastyores.mixin.MobEntityMixin
 import de.terminatorng.nastyores.util.WeightedOneIntProvider
 import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings
 import net.minecraft.block.BlockState
@@ -29,7 +28,7 @@ object TauntumOre: INastyOreSettings {
             .asSequence()
             .map { it.value.create(world) }
             .filterIsInstance<MobEntity>()
-            .map { (it as MobEntityMixin).invokeGetAmbientSound() }
+            .map { it.ambientSound }
             .filterNotNull()
             .plus(SoundEvents.ENTITY_CREEPER_PRIMED)
             .toList()

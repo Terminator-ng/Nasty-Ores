@@ -1,0 +1,11 @@
+{
+  "name": "Tauntum",
+  "icon": "nastyores:tauntum_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Some of the noises this mineral makes sound freakishly similar to animals or monsters. Maybe you should mine it just to get rid of distractions."
+    }
+  ]
+}

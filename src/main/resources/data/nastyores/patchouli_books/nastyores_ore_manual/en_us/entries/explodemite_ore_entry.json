@@ -1,0 +1,11 @@
+{
+  "name": "Explodemite",
+  "icon": "nastyores:explodemite_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Main food source of creepers, this ore contains more explosive power than the famed nuclear weapons. Why does it not obliterate everything, you ask? Well, before the main explosive peak is reached, the material is turned to ashes by its own explosion. Science."
+    }
+  ]
+}

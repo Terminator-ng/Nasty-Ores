@@ -39,7 +39,9 @@ object AmadeumOre: IInventoryTickableNastyOre {
     //     return ToolInfo(2, 250, 6.0f, 2.0f, 20)
     // }
 
-    fun getSound(world: World): Pair<Float, SoundEvent> {
+    fun getSound(world: World): Pair<Float, SoundEvent>? {
+        if (world.random.nextInt(20) != 0) return null
+
         val i = world.random.nextInt(15)
         val f = 2.0.pow((i - 12).toDouble() / 12.0 ).toFloat()
 
@@ -50,7 +52,7 @@ object AmadeumOre: IInventoryTickableNastyOre {
         world ?: return
 
         if (!world.isClient) {
-            val sound = getSound(world)
+            val sound = getSound(world) ?: return
             world.playSoundFromEntity(null, entity, sound.second, SoundCategory.MASTER, SOUND_VOLUME, sound.first)
         }
     }

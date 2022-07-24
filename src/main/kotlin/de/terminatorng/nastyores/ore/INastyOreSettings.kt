@@ -7,6 +7,9 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings
 import net.minecraft.block.Block
 import net.minecraft.block.OreBlock
+import net.minecraft.data.client.BlockStateModelGenerator
+import net.minecraft.data.client.ItemModelGenerator
+import net.minecraft.data.client.Models
 import net.minecraft.data.server.BlockLootTableGenerator
 import net.minecraft.enchantment.Enchantments
 import net.minecraft.item.BlockItem
@@ -19,6 +22,8 @@ import net.minecraft.loot.function.ApplyBonusLootFunction
 import net.minecraft.loot.function.ExplosionDecayLootFunction
 import net.minecraft.sound.BlockSoundGroup
 import net.minecraft.structure.rule.RuleTest
+import net.minecraft.tag.BlockTags
+import net.minecraft.tag.TagKey
 import net.minecraft.world.explosion.Explosion
 import net.minecraft.world.gen.YOffset
 import net.minecraft.world.gen.feature.OreConfiguredFeatures
@@ -42,16 +47,26 @@ interface INastyOreSettings: IOreGenSettings {
     fun requiresTool(): Boolean = true
     fun soundType(): BlockSoundGroup = BlockSoundGroup.STONE
     fun drops(ore: Block, item: Item?): LootTable.Builder =
-        if (dropsItemDirectly())
-            BlockLootTableGenerator.drops(ore)
-        else
+        if (dropsItemDirectly() && item != null)
             BlockLootTableGenerator.oreDrops(ore, item)
+        else
+            BlockLootTableGenerator.drops(ore)
+
+    fun itemHasIngotName(): Boolean = !dropsItemDirectly()
+
+    fun levelNeeded(): TagKey<Block> = BlockTags.NEEDS_IRON_TOOL
+
+    fun toolNeeded(): TagKey<Block> = BlockTags.PICKAXE_MINEABLE
 
     fun oreFactory(settings: FabricBlockSettings) = OreBlock(settings)
     fun oreItemFactory(settings: FabricItemSettings, block: Block) = BlockItem(block, settings)
     fun itemFactory(settings: FabricItemSettings) = Item(settings)
     fun blockFactory(settings: FabricBlockSettings) = Block(settings)
     fun blockItemFactory(settings: FabricItemSettings, block: Block) = BlockItem(block, settings)
+
+    fun genOreModel(oreBlock: Block, generator: BlockStateModelGenerator): Unit = generator.registerSimpleCubeAll(oreBlock)
+    fun genBlockModel(block: Block, generator: BlockStateModelGenerator): Unit = generator.registerSimpleCubeAll(block)
+    fun genItemModel(item: Item, generator: ItemModelGenerator): Unit = generator.register(item, Models.GENERATED)
 
     override fun veinSize(): Int = 8
     override fun countPlacement(): CountPlacementModifier = CountPlacementModifier.of(veinsPerChunk())

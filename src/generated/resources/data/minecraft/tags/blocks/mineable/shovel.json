@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "nastyores:appetite_ore",
+    "nastyores:idlikeabite_ore",
+    "nastyores:marmite_ore",
+    "nastyores:paintitwhite_ore"
+  ]
+}

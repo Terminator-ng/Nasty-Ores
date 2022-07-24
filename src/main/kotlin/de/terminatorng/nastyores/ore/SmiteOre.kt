@@ -17,6 +17,8 @@ object SmiteOre: INastyOreSettings {
     override fun hasArmor() = true
     override fun hasTools() = true
 
+    override fun dropsItemDirectly() = true
+
     // fun getArmorInfo(): ArmorInfo? {
     //     return ArmorInfo(8, intArrayOf(2, 5, 4, 2), 8)
     // }

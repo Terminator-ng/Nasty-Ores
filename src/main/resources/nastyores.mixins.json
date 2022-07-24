@@ -8,7 +8,6 @@
   "mixins": [],
   "client": [],
   "server": [
-    "FallingBlockEntityMixin",
-    "MobEntityMixin"
+    "FallingBlockEntityMixin"
   ]
 }

@@ -1,0 +1,11 @@
+{
+  "name": "Doesntevenexistium",
+  "icon": "nastyores:doesntevenexistium_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "This is a common ore found deep underground, which serves default practical purposes slightly superior to iron."
+    }
+  ]
+}

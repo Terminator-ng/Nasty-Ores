@@ -20,7 +20,7 @@ class AmadeumBlockEntity(pos: BlockPos?, state: BlockState?) : BlockEntity(ModBl
             world ?: return
             pos ?: return
 
-            val sound = AmadeumOre.getSound(world)
+            val sound = AmadeumOre.getSound(world) ?: return
             world.playSound(null, pos, sound.second, SoundCategory.MASTER, AmadeumOre.SOUND_VOLUME, sound.first)
         }
     }

@@ -19,6 +19,7 @@ object CrashiumOre: INastyOreSettings {
     override fun hasTools() = true
     override fun hasArmor() = true
 
+    override fun dropsItemDirectly() = true
     override fun oreFactory(settings: FabricBlockSettings) = object: OreBlock(settings) {
         override fun onBreak(world: World?, pos: BlockPos?, state: BlockState?, player: PlayerEntity?) {
             super.onBreak(world, pos, state, player)

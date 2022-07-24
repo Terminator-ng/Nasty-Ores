@@ -1,0 +1,11 @@
+{
+  "name": "Zombieunite",
+  "icon": "nastyores:zombieunite_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "This ore somehow seems to sense the amount of zombies, and becomes less hard to mine with a higher amount. It is therefore not easy to obtain. Protip: Open public facebook event 'Zombie party - everyone invited!'"
+    }
+  ]
+}

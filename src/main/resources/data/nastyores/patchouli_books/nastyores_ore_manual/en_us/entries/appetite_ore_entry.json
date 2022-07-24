@@ -1,0 +1,11 @@
+{
+  "name": "Appetite",
+  "icon": "nastyores:appetite_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Dude, are you seriously contemplating eating this mineral, whole? It has literally just been burrowed in sand, for who knows how long... Just don't, man. Have some self-respect."
+    }
+  ]
+}

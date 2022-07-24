@@ -1,0 +1,11 @@
+{
+  "name": "Unobtainium",
+  "icon": "nastyores:unobtainium_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "No methods applied to obtain this ore ever worked. Thus, not much is known - but it would make for a goddamn amazing armor, if finally acquired!"
+    }
+  ]
+}

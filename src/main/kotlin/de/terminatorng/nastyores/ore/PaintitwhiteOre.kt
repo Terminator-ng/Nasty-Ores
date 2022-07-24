@@ -14,6 +14,8 @@ import net.minecraft.loot.function.SetCountLootFunction
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider
 import net.minecraft.structure.rule.BlockMatchRuleTest
 import net.minecraft.structure.rule.RuleTest
+import net.minecraft.tag.BlockTags
+import net.minecraft.tag.TagKey
 import net.minecraft.util.math.intprovider.UniformIntProvider
 import net.minecraft.world.gen.YOffset
 import net.minecraft.world.gen.placementmodifier.CountPlacementModifier
@@ -22,6 +24,7 @@ import net.minecraft.world.gen.placementmodifier.CountPlacementModifier
 object PaintitwhiteOre: INastyOreSettings {
 
     override fun requiresTool() = false
+    override fun toolNeeded(): TagKey<Block> = BlockTags.SHOVEL_MINEABLE
 
     // fun harvestLevelRequired(isIngotBlock: Boolean): Int {
     //     return 0

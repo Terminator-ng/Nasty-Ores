@@ -1,0 +1,11 @@
+{
+  "name": "Stonium",
+  "icon": "nastyores:stonium_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "What are you looking this up for. It's just stone. What, are you expecting every rock to look exactly the same?"
+    }
+  ]
+}

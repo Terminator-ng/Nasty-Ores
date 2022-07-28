@@ -1,0 +1,11 @@
+{
+  "name": "Smite",
+  "icon": "nastyores:smite_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Smite is said to be Thor's favourite ore. It makes for absolutely awful armor, but maybe you can make some good tools out of it."
+    }
+  ]
+}

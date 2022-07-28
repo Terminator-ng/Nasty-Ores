@@ -1,0 +1,11 @@
+{
+  "name": "Shiftium",
+  "icon": "nastyores:shiftium_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Everything passes just right through it. You can't even remove it from its containing stone, much less use it. The only effective way of mining it is with pure energy - explosions!"
+    }
+  ]
+}

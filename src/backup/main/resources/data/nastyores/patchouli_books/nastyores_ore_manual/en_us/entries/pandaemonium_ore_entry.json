@@ -1,0 +1,11 @@
+{
+  "name": "Pandaemonium",
+  "icon": "nastyores:pandaemonium_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Mining this ore rips a hole in the inter-dimensional veils, and lets the nether out into the overworld. 2/10, not recommended."
+    }
+  ]
+}

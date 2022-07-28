@@ -2,7 +2,7 @@
   "type": "minecraft:smelting",
   "cookingtime": 200,
   "experience": 0.7,
-  "group": "iron_ingot",
+  "group": "barely_generite_ingot",
   "ingredient": {
     "item": "nastyores:barely_generite_ore"
   },

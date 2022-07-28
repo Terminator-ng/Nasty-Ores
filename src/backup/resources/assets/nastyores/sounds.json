@@ -1,0 +1,53 @@
+{
+    "mob.fleesonsite.say": {
+            "category": "neutral",
+            "sounds": [
+              "fleesonsite1",
+              "fleesonsite2",
+              "fleesonsite3"
+            ]
+    },
+    "mob.fleesonsite.hit": {
+           "category": "neutral",
+           "sounds": [
+             "fleesonsiteHurt"
+           ]
+    },
+    "mob.fleesonsite.death": {
+            "category": "neutral",
+            "sounds": [
+              "fleesonsiteDeath"
+            ]
+    },
+    "mob.nosleeptonite.death": {
+            "category": "neutral",
+            "sounds": [
+              "nosleeptoniteDeath"
+            ]
+    },
+    "mob.nosleeptonite.hit": {
+            "category": "neutral",
+            "sounds": [
+              "nosleeptoniteHurt"
+            ]
+    },
+    "mob.nosleeptonite.say": {
+            "category": "neutral",
+            "sounds": [
+              "nosleeptoniteIdle"
+            ]
+    },
+    "nosleeptonite.idle": {
+            "category": "neutral",
+            "sounds": [
+              {name: "nosleeptonite1", "stream": true}
+            ]
+    },
+    "pandaemonium.mine": {
+        "category": "block",
+        "sounds": [
+          "pandaemonium1",
+          "pandaemonium2"
+        ]
+    }
+}

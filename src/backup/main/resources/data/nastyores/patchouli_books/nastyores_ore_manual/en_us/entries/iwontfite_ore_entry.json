@@ -1,0 +1,11 @@
+{
+  "name": "Iwontfite",
+  "icon": "nastyores:iwontfite_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Just carrying this ore makes your limbs all wobbly, and your muscles seem to lose all strength. This, dear Steve, is the incredible power of pacifists."
+    }
+  ]
+}

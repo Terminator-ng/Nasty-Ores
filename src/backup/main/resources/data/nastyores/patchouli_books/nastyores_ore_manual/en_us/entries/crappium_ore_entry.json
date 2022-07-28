@@ -1,0 +1,11 @@
+{
+  "name": "Crappium",
+  "icon": "nastyores:crappium_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Nobody has ever found a good use for this ore. It's too common to be a commodity, too fragile to make for tools or armor, and just too damn ugly to be purely decorational. You'll be lucky if you don't have to pay to get rid of it."
+    }
+  ]
+}

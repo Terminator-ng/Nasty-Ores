@@ -14,10 +14,7 @@ import net.minecraft.util.math.Direction
 import net.minecraft.world.World
 
 
-object ZombieuniteOre: INastyOreSettings {
-
-    override fun drops(ore: Block, item: Item?): LootTable.Builder =
-        BlockLootTableGenerator.dropsWithSilkTouch(ore, ItemEntry.builder(Blocks.ZOMBIE_HEAD))
+object ZombieuniteOre {
 
     fun hardness(world: World, pos: BlockPos): Float {
         val zombies = world.getOtherEntities(null, Box(

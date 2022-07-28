@@ -1,0 +1,11 @@
+{
+  "name": "Uselessium",
+  "icon": "nastyores:uselessium_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Believe it or not, but this ore is even more useless than crappium. It literally does nothing. Maybe it will go away if you concentrate on ignoring it long enough."
+    }
+  ]
+}

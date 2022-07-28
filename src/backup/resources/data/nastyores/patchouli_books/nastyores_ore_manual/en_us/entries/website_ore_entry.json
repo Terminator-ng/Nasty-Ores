@@ -1,0 +1,11 @@
+{
+  "name": "Website",
+  "icon": "nastyores:website_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "This ore has discovered a way to break the 4th wall and found a tunnel out of the box. It slowly discoveres the infinite possibilities outside of Minecraft."
+    }
+  ]
+}

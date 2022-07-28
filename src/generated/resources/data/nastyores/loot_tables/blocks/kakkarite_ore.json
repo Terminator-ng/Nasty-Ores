@@ -8,23 +8,15 @@
           "type": "minecraft:item",
           "functions": [
             {
-              "add": false,
-              "count": 9000.0,
-              "function": "minecraft:set_count"
-            },
-            {
               "enchantment": "minecraft:fortune",
               "formula": "minecraft:ore_drops",
               "function": "minecraft:apply_bonus"
-            },
-            {
-              "function": "minecraft:explosion_decay"
             }
           ],
           "name": "nastyores:kakkarite"
         }
       ],
-      "rolls": 1.0
+      "rolls": 9000.0
     }
   ]
 }

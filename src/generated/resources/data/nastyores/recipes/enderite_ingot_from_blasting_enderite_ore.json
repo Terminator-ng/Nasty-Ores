@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 0.7,
+  "group": "enderite_ingot",
+  "ingredient": {
+    "item": "nastyores:enderite_ore"
+  },
+  "result": "nastyores:enderite_ingot"
+}

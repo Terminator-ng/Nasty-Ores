@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 0.7,
+  "group": "nosleeptonite_ingot",
+  "ingredient": {
+    "item": "nastyores:nosleeptonite_ore"
+  },
+  "result": "nastyores:nosleeptonite_ingot"
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "nastyores:diamond_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "nastyores:diamond"
+  }
+}

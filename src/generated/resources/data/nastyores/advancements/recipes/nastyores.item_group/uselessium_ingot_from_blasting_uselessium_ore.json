@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:uselessium_ingot_from_blasting_uselessium_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_uselessium_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nastyores:uselessium_ore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_uselessium_ore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:uselessium_ingot_from_blasting_uselessium_ore"
+    ]
+  }
+}

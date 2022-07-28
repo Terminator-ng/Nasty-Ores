@@ -1,0 +1,11 @@
+{
+  "name": "Balancium",
+  "icon": "nastyores:balancium_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "To make up for long days spent mining 10000 stones, this balances out your stress and frustration. It contains many shinies. What more do you need to know?"
+    }
+  ]
+}

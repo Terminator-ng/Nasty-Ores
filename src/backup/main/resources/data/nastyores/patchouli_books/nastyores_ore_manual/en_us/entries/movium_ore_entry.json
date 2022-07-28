@@ -1,0 +1,11 @@
+{
+  "name": "Movium",
+  "icon": "nastyores:movium_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "You can never quite mine it... Just when you are about done, it just appears to have moved. Maybe you have just mined the wrong spot?"
+    }
+  ]
+}

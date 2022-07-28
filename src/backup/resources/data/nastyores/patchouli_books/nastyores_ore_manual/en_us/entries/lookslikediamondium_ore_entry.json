@@ -1,0 +1,11 @@
+{
+  "name": "Diamond",
+  "icon": "nastyores:lookslikediamondium_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "For whatever reason, there are diamond-impostors around in the ground, too, probably to get the respect of other ores. Many a miner have found themselves at home, holding up their prize from a long day of work, to discover it was actually just Lookslikediamondium."
+    }
+  ]
+}

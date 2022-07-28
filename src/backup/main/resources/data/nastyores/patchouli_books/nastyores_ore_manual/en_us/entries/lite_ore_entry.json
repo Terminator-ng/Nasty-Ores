@@ -1,0 +1,11 @@
+{
+  "name": "Lite",
+  "icon": "nastyores:lite_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Ohhh, pretty shiny light! Critics say the glow is caused by violent radiation, but seriously, you can't even see that stuff. Jackpot, free light source!"
+    }
+  ]
+}

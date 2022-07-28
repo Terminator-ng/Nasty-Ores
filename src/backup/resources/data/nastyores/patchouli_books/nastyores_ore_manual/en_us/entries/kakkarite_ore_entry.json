@@ -1,0 +1,11 @@
+{
+  "name": "Kakkarite",
+  "icon": "nastyores:kakkarite_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "This ore is so incredibly powerfully compressed, you have no idea. Like, wow. Mine it, and you will be showered with kakkarite ingots, maybe about 9000 of them."
+    }
+  ]
+}

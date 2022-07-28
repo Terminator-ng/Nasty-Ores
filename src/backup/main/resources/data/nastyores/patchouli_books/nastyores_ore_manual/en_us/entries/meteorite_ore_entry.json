@@ -1,0 +1,11 @@
+{
+  "name": "Meteorite",
+  "icon": "nastyores:meteorite_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Mining this ore somehow attracts cosmic forces, and makes it rain stone or netherrack. As long as you mine it underground, you should be fine, but remember to warn others above when you do mine it!"
+    }
+  ]
+}

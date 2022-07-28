@@ -5,19 +5,46 @@
       "bonus_rolls": 0.0,
       "entries": [
         {
-          "type": "minecraft:item",
-          "functions": [
+          "type": "minecraft:alternatives",
+          "children": [
             {
-              "add": false,
-              "damage": {
-                "type": "minecraft:uniform",
-                "max": 12.5,
-                "min": 0.0
-              },
-              "function": "minecraft:set_damage"
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "enchantments": [
+                      {
+                        "enchantment": "minecraft:silk_touch",
+                        "levels": {
+                          "min": 1
+                        }
+                      }
+                    ]
+                  }
+                }
+              ],
+              "name": "nastyores:wantarite_ore"
+            },
+            {
+              "type": "minecraft:item",
+              "functions": [
+                {
+                  "add": false,
+                  "damage": {
+                    "type": "minecraft:uniform",
+                    "max": 25.0,
+                    "min": 0.0
+                  },
+                  "function": "minecraft:set_damage"
+                },
+                {
+                  "function": "minecraft:explosion_decay"
+                }
+              ],
+              "name": "minecraft:carrot_on_a_stick"
             }
-          ],
-          "name": "minecraft:carrot_on_a_stick"
+          ]
         }
       ],
       "rolls": 1.0

@@ -2,7 +2,7 @@
   "type": "minecraft:smelting",
   "cookingtime": 200,
   "experience": 0.7,
-  "group": "iron_ingot",
+  "group": "amadeum_ingot",
   "ingredient": {
     "item": "nastyores:amadeum_ore"
   },

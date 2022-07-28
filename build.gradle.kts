@@ -42,14 +42,6 @@ dependencies {
     modImplementation("vazkii.patchouli", "Patchouli", patchouliVersion)
 }
 
-// val runDatagen by loom.runConfigs.named("runDatagen")
-
-// val copyDatagen by tasks.registering(Copy::class) {
-//     from("src/main/generated")
-//     into("build/resources/main")
-//     dependsOn(runDatagen)
-// }
-
 tasks {
     val javaVersion = JavaVersion.VERSION_17
     withType<JavaCompile> {
@@ -63,10 +55,7 @@ tasks {
         sourceCompatibility = javaVersion.toString()
         targetCompatibility = javaVersion.toString()
     }
-    jar {
-        from("LICENSE") { rename { "${it}_${base.archivesName}" } }
-        // dependsOn(copyDatagen)
-    }
+    jar { from("LICENSE") { rename { "${it}_${base.archivesName}" } } }
     processResources {
         inputs.property("version", project.version)
         filesMatching("fabric.mod.json") { expand(mutableMapOf("version" to project.version)) }
@@ -92,7 +81,7 @@ loom {
 
     runs {
         create("Data Generation") {
-            client()
+            server()
             vmArg("-Dfabric-api.datagen")
             vmArg("-Dfabric-api.datagen.output-dir=${file(generatedResources)}")
         }

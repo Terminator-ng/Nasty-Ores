@@ -1,0 +1,11 @@
+{
+  "name": "Killium",
+  "icon": "nastyores:killium_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Mining this ore is so amazing, you can guarantee a heart attack afterwards. Just try it yourself - I assure you you will never do anything as great afterwards!"
+    }
+  ]
+}

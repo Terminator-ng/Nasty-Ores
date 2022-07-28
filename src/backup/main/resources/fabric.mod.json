@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "nastyores",
+  "version": "${version}",
+  "name": "Nasty Ores",
+  "description": "Mod Description",
+  "authors": [
+    "Terminator_ng"
+  ],
+  "accessWidener": "nastyores.accesswidener",
+  "contact": {
+    "homepage": "https://example.com/",
+    "issues": "https://example.com/",
+    "sources": "https://example.com/"
+  },
+  "license": "GNU General Public License v3.0",
+  "icon": "assets/nastyores/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      {
+        "adapter": "kotlin",
+        "value": "de.terminatorng.nastyores.NastyOresKt::init"
+      }
+    ],
+    "fabric-datagen": [
+      "de.terminatorng.nastyores.datagen.ModDatagen"
+    ]
+  },
+  "mixins": [
+    "nastyores.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.8",
+    "fabric": "*",
+    "fabric-language-kotlin": ">=1.7.4+kotlin.1.6.21",
+    "minecraft": "1.19.x",
+    "java": ">=17"
+  }
+}

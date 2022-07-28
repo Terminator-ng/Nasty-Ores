@@ -1,0 +1,11 @@
+{
+  "name": "Marmite",
+  "icon": "nastyores:marmite_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "All-time favourite bread spread. Contrary to popular belief, it's not organic matter, but actually mined from stone. Try smelting it into its workable form, and enjoy tasty goodness!"
+    }
+  ]
+}

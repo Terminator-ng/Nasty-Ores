@@ -1,0 +1,11 @@
+{
+  "name": "Breakium",
+  "icon": "nastyores:breakium_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Theoretically, Breakium is just a normal ore that is found below the surface. However, past mining experiments have revealed it to be cursed - All pickaxes get a broken shaft, a crack in the metal, or just straight-up disappear when mining. Handle with care."
+    }
+  ]
+}

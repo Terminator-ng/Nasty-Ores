@@ -1,0 +1,11 @@
+{
+  "name": "Paintitwhite",
+  "icon": "nastyores:paintitwhite_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "In all actuality, this 'ore' is really just a skeleton ground into little bits by time and tectonics. Maybe it could be used for coloring textiles, or as a fertilizer for your orchis garden."
+    }
+  ]
+}

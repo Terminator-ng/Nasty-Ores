@@ -1,0 +1,11 @@
+{
+  "name": "Nopium",
+  "icon": "nastyores:nopium_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Seems to just slip out of your hands, or even your pockets, all the time. Once, a man dedicated his whole life to making himself its master, and crafted a whole armor from them. The result: The armor would somehow just fall off. Maybe you should take this lesson and mine more worthwhile ores."
+    }
+  ]
+}

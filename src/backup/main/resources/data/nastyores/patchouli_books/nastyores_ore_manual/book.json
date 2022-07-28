@@ -1,0 +1,7 @@
+{
+  "name": "Ore Manual",
+  "landing_text": "All about Nasty Ore's ores",
+  "version": 1,
+  "model": "nastyores:ore_manual",
+  "creative_tab": "nastyores.item_group"
+}

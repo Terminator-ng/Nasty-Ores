@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 0.7,
+  "group": "nopium_ingot",
+  "ingredient": {
+    "item": "nastyores:nopium_ore"
+  },
+  "result": "nastyores:nopium_ingot"
+}

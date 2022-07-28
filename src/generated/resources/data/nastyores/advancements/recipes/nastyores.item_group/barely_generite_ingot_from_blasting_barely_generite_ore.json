@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_barely_generite_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nastyores:barely_generite_ore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:barely_generite_ingot_from_blasting_barely_generite_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_barely_generite_ore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:barely_generite_ingot_from_blasting_barely_generite_ore"
+    ]
+  }
+}

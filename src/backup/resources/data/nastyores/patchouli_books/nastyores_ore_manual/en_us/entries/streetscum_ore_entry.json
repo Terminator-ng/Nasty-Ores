@@ -1,0 +1,11 @@
+{
+  "name": "Streetscum",
+  "icon": "nastyores:streetscum_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Excellent pickpocket, especially considering it shouldn't even be able to move. Try to keep your distance from it."
+    }
+  ]
+}

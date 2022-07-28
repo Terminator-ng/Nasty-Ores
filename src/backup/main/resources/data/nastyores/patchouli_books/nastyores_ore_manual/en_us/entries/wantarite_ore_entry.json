@@ -1,0 +1,11 @@
+{
+  "name": "Wantarite",
+  "icon": "nastyores:wantarite_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Somehow contains a pig. Don't ask me how, I'm just making these stories up. This is honestly asking too much of me."
+    }
+  ]
+}

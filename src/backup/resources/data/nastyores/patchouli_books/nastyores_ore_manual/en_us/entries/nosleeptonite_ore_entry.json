@@ -1,0 +1,11 @@
+{
+  "name": "Nosleeptonite",
+  "icon": "nastyores:nosleeptonite_ore",
+  "category": "nastyores:ores_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The ore of your nightmares. The dark king of them all, and otherwise just the incarnation of your deepest fears. AVOID"
+    }
+  ]
+}

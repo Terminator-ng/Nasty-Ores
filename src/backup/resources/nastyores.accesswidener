@@ -1,0 +1,4 @@
+accessWidener	v1		named
+
+accessible		field	net/minecraft/data/client/ItemModelGenerator	writer			Ljava/util/function/BiConsumer;
+accessible		method	net/minecraft/entity/mob/MobEntity				getAmbientSound	()Lnet/minecraft/sound/SoundEvent;

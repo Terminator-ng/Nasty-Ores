@@ -10,12 +10,10 @@
     "nastyores:enderite_ore",
     "nastyores:explodemite_ore",
     "nastyores:ghostium_ore",
-    "nastyores:iwontfite_ore",
     "nastyores:kakkarite_ore",
     "nastyores:killium_ore",
     "nastyores:lite_ore",
-    "nastyores:lookslikediamondium_ore",
-    "nastyores:lookslikediamondium_block",
+    "nastyores:diamond_ore",
     "nastyores:meteorite_ore",
     "nastyores:misleadium_ore",
     "nastyores:movium_ore",
@@ -33,6 +31,18 @@
     "nastyores:wannafite_ore",
     "nastyores:wantarite_ore",
     "nastyores:website_ore",
-    "nastyores:zombieunite_ore"
+    "nastyores:zombieunite_ore",
+    "nastyores:amadeum_block",
+    "nastyores:barely_generite_block",
+    "nastyores:crappium_block",
+    "nastyores:crashium_block",
+    "nastyores:enderite_block",
+    "nastyores:kakkarite_block",
+    "nastyores:diamond_block",
+    "nastyores:marmite_block",
+    "nastyores:nopium_block",
+    "nastyores:nosleeptonite_block",
+    "nastyores:polite_block",
+    "nastyores:smite_block"
   ]
 }
